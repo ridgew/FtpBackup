@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79E5B032-6C0B-40BF-9117-57B8DD2E714D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SurfingDataSyn</RootNamespace>
+    <AssemblyName>SurfingDataSyn</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;UNMANAGED, COMPRESS, LZMA_STREAM, DOTNET20</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;UNMANAGED, COMPRESS, LZMA_STREAM, DOTNET20</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FileBackUp.cs" />
+    <Compile Include="FtpCmd.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SevenZip\ArchiveEmulationStreamProxy.cs" />
+    <Compile Include="SevenZip\ArchiveExtractCallback.cs" />
+    <Compile Include="SevenZip\ArchiveOpenCallback.cs" />
+    <Compile Include="SevenZip\ArchiveUpdateCallback.cs" />
+    <Compile Include="SevenZip\COM.cs" />
+    <Compile Include="SevenZip\Common.cs" />
+    <Compile Include="SevenZip\EventArgs.cs" />
+    <Compile Include="SevenZip\Exceptions.cs" />
+    <Compile Include="SevenZip\FileSignatureChecker.cs" />
+    <Compile Include="SevenZip\Formats.cs" />
+    <Compile Include="SevenZip\LibraryFeature.cs" />
+    <Compile Include="SevenZip\LibraryManager.cs" />
+    <Compile Include="SevenZip\LzmaDecodeStream.cs" />
+    <Compile Include="SevenZip\LzmaEncodeStream.cs" />
+    <Compile Include="SevenZip\LzmaProgressCallback.cs" />
+    <Compile Include="SevenZip\NativeMethods.cs" />
+    <Compile Include="SevenZip\sdk\Common\CRC.cs" />
+    <Compile Include="SevenZip\sdk\Common\InBuffer.cs" />
+    <Compile Include="SevenZip\sdk\Common\OutBuffer.cs" />
+    <Compile Include="SevenZip\sdk\Compress\LZMA\LzmaBase.cs" />
+    <Compile Include="SevenZip\sdk\Compress\LZMA\LzmaDecoder.cs" />
+    <Compile Include="SevenZip\sdk\Compress\LZMA\LzmaEncoder.cs" />
+    <Compile Include="SevenZip\sdk\Compress\LZ\IMatchFinder.cs" />
+    <Compile Include="SevenZip\sdk\Compress\LZ\LzBinTree.cs" />
+    <Compile Include="SevenZip\sdk\Compress\LZ\LzInWindow.cs" />
+    <Compile Include="SevenZip\sdk\Compress\LZ\LzOutWindow.cs" />
+    <Compile Include="SevenZip\sdk\Compress\RangeCoder\RangeCoder.cs" />
+    <Compile Include="SevenZip\sdk\Compress\RangeCoder\RangeCoderBit.cs" />
+    <Compile Include="SevenZip\sdk\Compress\RangeCoder\RangeCoderBitTree.cs" />
+    <Compile Include="SevenZip\sdk\ICoder.cs" />
+    <Compile Include="SevenZip\SevenZipCompressor.cs" />
+    <Compile Include="SevenZip\SevenZipCompressorAsynchronous.cs" />
+    <Compile Include="SevenZip\SevenZipExtractor.cs" />
+    <Compile Include="SevenZip\SevenZipExtractorAsynchronous.cs" />
+    <Compile Include="SevenZip\StreamWrappers.cs" />
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="FileBackUp.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
